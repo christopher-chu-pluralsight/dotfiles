@@ -27,5 +27,7 @@ let g:multi_cursor_quit_key            = '<Esc>'
 Plug 'ErichDonGubler/vim-sublime-monokai'
 colorscheme sublimemonokai
 
+Plug 'airblade/vim-gitgutter'
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
