@@ -1,11 +1,8 @@
-alias prof='vim ~/.bash_profile && source ~/.bash_profile && echo "Sourced ~/.bash_profile"';
+alias prof='vim ~/.zshrc && source ~/.zshrc && echo "Sourced ~/.zshrc"';
 alias ll='ls -la';
 alias dev='ssh smarterer@dev.pluralsight.com';
 alias dmount='sudo mount -t nfs dev.pluralsight.com:/opt/assessment-tools /opt/assessment-tools';
-
 export PATH=$PATH:~/bin
-
-
 
 autoload -U promptinit; promptinit
 
