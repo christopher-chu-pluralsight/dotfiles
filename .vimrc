@@ -1,6 +1,7 @@
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
 set number
 set hlsearch
+set splitright
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
@@ -10,6 +11,9 @@ call plug#begin('~/.vim/plugged')
 " :PlugClean - clean any unused plugins
 
 " Declare the list of plugins.
+
+Plug 'itchyny/lightline.vim'
+
 Plug 'scrooloose/nerdtree'
 map <C-o> :NERDTreeToggle<CR>
 
@@ -28,6 +32,7 @@ Plug 'ErichDonGubler/vim-sublime-monokai'
 colorscheme sublimemonokai
 
 Plug 'airblade/vim-gitgutter'
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
