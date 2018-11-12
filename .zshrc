@@ -9,6 +9,15 @@ alias work='cd ~/work'
 
 export PATH=$PATH:~/bin
 
+# DVS Docker stuff
+export COMPOSER_HOME=~/work/dvs-sandbox
+alias ddir='cd $COMPOSER_HOME'
+alias dfresh='$COMPOSER_HOME/scripts/refresh.sh'
+alias dstart='cd $COMPOSER_HOME && docker-compose up -d && cd - > /dev/null'
+alias dstop='cd $COMPOSER_HOME && docker-compose stop && cd - > /dev/null'
+alias dps='cd $COMPOSER_HOME && docker-compose ps && cd - > /dev/null'
+
+
 autoload -U promptinit; promptinit
 
 # optionally define some options
