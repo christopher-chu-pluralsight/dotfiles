@@ -1,7 +1,17 @@
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set number
 set hlsearch
 set splitright
+set wildmenu
+
+" Filetype-specific indentation can be configured
+" by adding files to ~/.vim/indent/
+filetype indent on
+
+let mapleader=","
+
+" nnoremap <leader><lt> <C-w>20<lt>
+" nnoremap <leader><gt> <C-w>20<gt>
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
@@ -18,6 +28,9 @@ Plug 'scrooloose/nerdtree'
 map <C-o> :NERDTreeToggle<CR>
 
 Plug 'ctrlpvim/ctrlp.vim'
+" Note: if your custom ignore patterns are not working,
+" try running :ClearAllCtrlPCaches (or press F5)
+let g:ctrlp_custom_ignore = { 'dir': 'node_modules' }
 
 Plug 'pangloss/vim-javascript'
 let g:javascript_plugin_jsdoc = 1
@@ -32,6 +45,9 @@ Plug 'ErichDonGubler/vim-sublime-monokai'
 colorscheme sublimemonokai
 
 Plug 'airblade/vim-gitgutter'
+
+Plug 'davidhalter/jedi-vim'
+let g:jedi#use_splits_not_buffers = 'left' 
 
 
 " List ends here. Plugins become visible to Vim after this call.
