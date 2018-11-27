@@ -1,8 +1,17 @@
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set number
-set hlsearch
 set splitright
 set wildmenu
+
+syntax on
+set hlsearch 
+set incsearch
+
+" Note: these do not work when you have have set a color
+" using the `colorscheme` command. You need to directly
+" modify the color file itself.
+highlight Search guibg=red ctermbg=red term=italic
+highlight IncSearch guibg=black ctermbg=black term=underline
 
 " Filetype-specific indentation can be configured
 " by adding files to ~/.vim/indent/

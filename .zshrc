@@ -6,6 +6,7 @@ alias dmount='sudo umount -f /opt/assessment-tools; sudo mount -t nfs dev.plural
 alias dot='cd ~/work/dotfiles && git status';
 alias tools='cd /opt/assessment-tools && git status';
 alias work='cd ~/work'
+alias vm='cd ~/work/assessment-tools-vm';
 
 export PATH=$PATH:~/bin
 
