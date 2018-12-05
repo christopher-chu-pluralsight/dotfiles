@@ -1,12 +1,12 @@
 alias prof='vim ~/.zshrc && source ~/.zshrc && echo "Sourced ~/.zshrc"';
 alias ll='ls -la';
 alias dev='ssh smarterer@dev.pluralsight.com';
-alias vup='cd ~/work/assessment-tools-vm && vagrant up';
 alias dmount='sudo umount -f /opt/assessment-tools; sudo mount -t nfs dev.pluralsight.com:/opt/assessment-tools /opt/assessment-tools; mount | grep pluralsight';
 alias dot='cd ~/work/dotfiles && git status';
 alias tools='cd /opt/assessment-tools && git status';
 alias work='cd ~/work'
 alias vm='cd ~/work/assessment-tools-vm';
+alias vup='vm && vagrant up';
 
 export PATH=$PATH:~/bin
 
