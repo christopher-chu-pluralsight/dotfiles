@@ -28,8 +28,8 @@ let mapleader=","
 
 vmap > >gv  " stay in visual mode while indenting 
 vmap < <gv  " stay in visual mode while unindenting
-" nnoremap <leader><lt> <C-w>20<lt>
-" nnoremap <leader><gt> <C-w>20<gt>
+nnoremap <leader>[ :exe "vertical resize -15" <CR>
+nnoremap <leader>] :exe "vertical resize +15" <CR>
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
