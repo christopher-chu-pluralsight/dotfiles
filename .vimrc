@@ -1,11 +1,18 @@
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
-set number
-set splitright
-set wildmenu
+set tabstop=4 shiftwidth=4 " Default tab width
+set softtabstop=0          " ???
+set expandtab              " Spaces instead of tabs 
+set smarttab               " ???
 
-syntax on
-set hlsearch 
-set incsearch
+autocmd Filetype python setlocal tabstop=4 shiftwidth=4
+autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2
+
+set number       " Show line numbers
+set splitright   " New splits open to the right instead of left
+set wildmenu     " Needed for auto-complete features
+
+syntax on        " Enable syntax highlighting (usually covered by colorscheme)
+set hlsearch     " Highlight matching search terms
+set incsearch    " Highlight as soon as you start typing
 
 " Note: these do not work when you have have set a color
 " using the `colorscheme` command. You need to directly

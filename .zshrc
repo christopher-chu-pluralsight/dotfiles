@@ -1,7 +1,8 @@
 alias prof='vim ~/.zshrc && source ~/.zshrc && echo "Sourced ~/.zshrc"';
 alias ll='ls -la';
 alias dev='ssh smarterer@dev.pluralsight.com';
-alias dmount='sudo umount -f /opt/assessment-tools; sudo mount -t nfs dev.pluralsight.com:/opt/assessment-tools /opt/assessment-tools; mount | grep pluralsight';
+alias dumount='sudo umount -f /opt/assessment-tools';
+alias dmount='dumount; sudo mount -t nfs dev.pluralsight.com:/opt/assessment-tools /opt/assessment-tools; mount | grep pluralsight';
 alias dot='cd ~/work/dotfiles && git status';
 alias tools='cd /opt/assessment-tools && git status';
 alias work='cd ~/work'
