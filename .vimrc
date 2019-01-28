@@ -1,10 +1,9 @@
-set tabstop=4 shiftwidth=4 " Default tab width
+set tabstop=2 shiftwidth=2 " Default tab width
 set softtabstop=0          " ???
 set expandtab              " Spaces instead of tabs 
 set smarttab               " ???
 
-autocmd Filetype python setlocal tabstop=4 shiftwidth=4
-autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2
+autocmd Filetype python setlocal ts=4 sw=4 et sta 
 
 set number       " Show line numbers
 set splitright   " New splits open to the right instead of left
@@ -30,6 +29,9 @@ vmap > >gv  " stay in visual mode while indenting
 vmap < <gv  " stay in visual mode while unindenting
 nnoremap <leader>[ :exe "vertical resize -15" <CR>
 nnoremap <leader>] :exe "vertical resize +15" <CR>
+
+" Still trying to figure this one out...
+" command TrailingWhitespace :exe "%s/\s\+$//g"    
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
@@ -63,9 +65,13 @@ let g:javascript_plugin_jsdoc = 1
 " let g:multi_cursor_next_key            = '<C-n>'
 " let g:multi_cursor_quit_key            = '<Esc>'
 
-" Sublime colorscheme
-Plug 'ErichDonGubler/vim-sublime-monokai'
+
+" Color Schemes
+"Plug 'ErichDonGubler/vim-sublime-monokai'
 colorscheme sublimemonokai
+"Plug 'morhetz/gruvbox'
+"colorscheme gruvbox
+"colorscheme chris1
 
 " Shows git info about each line
 Plug 'airblade/vim-gitgutter'
@@ -77,6 +83,9 @@ let g:jedi#use_splits_not_buffers = 'left'
 " Find-in-file searching
 " Prereq: `brew install ack`
 Plug 'mileszs/ack.vim'
+
+" Close matching parens
+Plug 'rstacruz/vim-closer'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
