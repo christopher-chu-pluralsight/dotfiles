@@ -18,7 +18,6 @@ alias dmount='dumount; sudo mount -t nfs dev.pluralsight.com:/opt/assessment-too
 alias dev="ssh_cmd clear"
 
 
-
 ############
 # VM SETUP #
 ############
@@ -29,6 +28,9 @@ alias dev="ssh_cmd clear"
 function ssh_cmd() {
   ssh -t smarterer@dev.pluralsight.com "bash -ci 'set_colors && clear && $1' ; bash"
 }
+
+alias DEV="dot && ./tmux_sessions/DEV.sh";
+alias VM="dot && ./tmux_sessions/VM.sh";
 
 
 export PATH=$PATH:~/bin
