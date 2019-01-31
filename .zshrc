@@ -14,7 +14,8 @@ alias vup='vm && vagrant up';
 alias vdown='vm && vagrant halt';
 alias dumount='sudo umount -f /opt/assessment-tools';
 alias dmount='dumount; sudo mount -t nfs dev.pluralsight.com:/opt/assessment-tools /opt/assessment-tools; mount | grep pluralsight';
-alias dev='ssh smarterer@dev.pluralsight.com';
+#alias dev="ssh smarterer@dev.pluralsight.com";
+alias dev="ssh_cmd clear"
 
 
 
