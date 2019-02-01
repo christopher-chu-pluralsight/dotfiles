@@ -10,8 +10,9 @@ alias fart='cd ~/not-work/master-chu/fartbucket && git status'
 # Assessment Tools VM
 alias tools='cd /opt/assessment-tools && git status';
 alias vm='cd ~/work/assessment-tools-vm';
-alias vup='vm && vagrant up';
-alias vdown='vm && vagrant halt';
+alias vstat='vm && vagrant status && cd -';
+alias vup='vm && vagrant up && cd -';
+alias vdown='vm && vagrant halt && cd -';
 alias dumount='sudo umount -f /opt/assessment-tools';
 alias dmount='dumount; sudo mount -t nfs dev.pluralsight.com:/opt/assessment-tools /opt/assessment-tools; mount | grep pluralsight';
 #alias dev="ssh smarterer@dev.pluralsight.com";
@@ -31,6 +32,8 @@ function ssh_cmd() {
 
 alias DEV="dot && ./tmux_sessions/DEV.sh";
 alias VM="dot && ./tmux_sessions/VM.sh";
+
+
 
 
 export PATH=$PATH:~/bin
