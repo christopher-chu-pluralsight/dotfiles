@@ -1,4 +1,4 @@
 tmux new-session -s DEV -n vim \; \
-  send-keys "tools && vim" C-m \; \
+  send-keys "tools" C-m \; \
   new-window -n git \; \
-  send-keys "tools && vup && dmount" C-m \;
+  send-keys "vup && dmount && tools" C-m \;
