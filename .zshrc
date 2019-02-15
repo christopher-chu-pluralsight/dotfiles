@@ -17,6 +17,8 @@ alias dumount='sudo umount -f /opt/assessment-tools';
 alias dmount='dumount; sudo mount -t nfs dev.pluralsight.com:/opt/assessment-tools /opt/assessment-tools; mount | grep pluralsight';
 #alias dev="ssh smarterer@dev.pluralsight.com";
 alias dev="ssh_cmd clear"
+alias wait_for_vm="~/work/dotfiles/tmux_scripts/wait_for_vm.sh"
+alias wait_for_mount="~/work/dotfiles/tmux_scripts/wait_for_mount.sh"
 
 
 ############
