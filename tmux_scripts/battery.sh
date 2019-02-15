@@ -1,4 +1,4 @@
-percent_remaining=$(pmset -g batt | grep -E '[0-9]{1,3}%' | awk 'NR==1{print$3}' | cut -c 1-3)
+percent_remaining=$(pmset -g batt | grep -E '[0-9]{1,3}%' | awk 'NR==1{print$3}' | grep -o '[0-9]\+')
 
 ac_power=$(pmset -g batt | grep 'AC Power')
 
