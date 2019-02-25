@@ -34,6 +34,9 @@ nnoremap <leader>] :exe "vertical resize +15" <CR>
 " Still trying to figure this one out...
 " command TrailingWhitespace :exe "%s/\s\+$//g"    
 
+" Vim Plug - copy this file to `autoload`:
+" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 
