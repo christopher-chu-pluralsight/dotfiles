@@ -8,14 +8,14 @@ alias show_motd='for i in /etc/update-motd.d/*; do if [ "$i" != "/etc/update-mot
 alias svenv='source .venv/bin/activate'
 alias tools='cd /opt/assessment-tools && svenv'
 alias serve2='tools && python scribe/server/scribe_app.py serve --handle=test-handle'
-alias serve='tools && sudo service uwsgi restart && tail -f logs/scribe_8085.log'
+alias serve='tools && sudo service uwsgi restart && sudo tail -f logs/scribe_8085.log'
 alias ui="tools && yarn build-dev --watch"
 alias herald1="tools && python herald/herald_app.py endpoint:bind && python herald/herald_app.py endpoint:declare && python herald/herald_app.py pluralsight:consumer"
 alias herald2="tools && python herald/herald_app.py assessments:task"
 
 
 # DVS Docker stuff
-export COMPOSER_HOME=~/work/dvs-sandbox
+export COMPOSER_HOME=/opt/dvs
 alias ddir='cd $COMPOSER_HOME'
 alias dfresh='$COMPOSER_HOME/scripts/refresh.sh'
 alias dstart='cd $COMPOSER_HOME && docker-compose up -d && cd - > /dev/null'
