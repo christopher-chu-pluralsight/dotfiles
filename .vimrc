@@ -62,6 +62,9 @@ let g:ctrlp_custom_ignore = { 'dir': 'node_modules' }
 Plug 'pangloss/vim-javascript'
 let g:javascript_plugin_jsdoc = 1
 
+" Syntax for JSX
+Plug 'maxmellon/vim-jsx-pretty'
+
 " Multi-select like sublime
 " Plug 'terryma/vim-multiple-cursors'
 " let g:multi_cursor_use_default_mapping = 0

@@ -2,7 +2,13 @@
 alias prof='vim ~/.zshrc && source ~/.zshrc && echo "Sourced ~/.zshrc"';
 alias ll='ls -la';
 alias dot='cd ~/work/dotfiles && git status';
-alias work='cd ~/work'
+alias work='cd ~/work';
+alias dc='docker-compose';
+
+# Git
+alias gco='git checkout'
+alias gs='git status'
+alias gl='git log'
 
 # Not work
 alias fart='cd ~/not-work/master-chu/fartbucket && git status'
@@ -20,6 +26,9 @@ alias dev="ssh_cmd clear"
 alias wait_for_vm="~/work/dotfiles/tmux_scripts/wait_for_vm.sh"
 alias wait_for_mount="~/work/dotfiles/tmux_scripts/wait_for_mount.sh"
 
+# Guided Learning
+alias nuke='dc down && make build && make start && make migrate && make seed'
+
 
 ############
 # VM SETUP #
@@ -35,15 +44,15 @@ function ssh_cmd() {
 alias DEV="dot && ./tmux_sessions/DEV.sh";
 alias VM="dot && ./tmux_sessions/VM.sh";
 
-
-
-
 export PATH=$PATH:~/bin
 
+# NPM / NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 autoload -U promptinit; promptinit
 # optionally define some options
 # https://github.com/sindresorhus/pure#options
 # PURE_CMD_MAX_EXEC_TIME=10
-
 prompt pure
