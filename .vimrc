@@ -94,12 +94,30 @@ Plug 'mileszs/ack.vim'
 " Close matching parens
 Plug 'rstacruz/vim-closer'
 
-" Python IDE - :help pymode
+" Python Mode IDE - :help pymode
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 let g:pymode_python = 'python3'                               " Set syntax to python3
 let g:pymode_breakpoint_bind = '<leader>b'                    " Breakpoint shortcut
 let g:pymode_breakpoint_cmd = 'import ipdb; ipdb.set_trace()' " Breakpoint command
 let g:pymode_lint_on_write = 0
+let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']   " Equal to flake8
+
+" ESLint
+Plug 'w0rp/ale'
+nmap <Leader>l :ALELint<CR>
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_text_change = 'normal'
+let g:ale_lint_on_enter = 0
+let g:ale_set_highlights = 0
+let g:ale_linters_ignore = ['tsserver']
+let g:ale_linters = {
+  \ 'javascript': ['eslint'],
+  \ }
+
+" Python Black
+Plug 'python/black'
+let g:black_skip_string_normalization = 1
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

@@ -9,9 +9,13 @@ alias dc='docker-compose';
 alias gco='git checkout'
 alias gs='git status'
 alias gl='git log'
+alias gd='git diff'
+alias ga='git add'
 
 # Not work
 alias fart='cd ~/not-work/master-chu/fartbucket && git status'
+alias :q='echo "you are not in vim" && say "you are not in vim"'
+alias fixaudio='sudo launchctl unload /System/Library/LaunchDaemons/com.apple.audio.coreaudiod.plist && sudo launchctl load /System/Library/LaunchDaemons/com.apple.audio.coreaudiod.plist'
 
 # Assessment Tools VM
 alias tools='cd /opt/assessment-tools && git status';
@@ -28,6 +32,10 @@ alias wait_for_mount="~/work/dotfiles/tmux_scripts/wait_for_mount.sh"
 
 # Guided Learning
 alias nuke='dc down && make build && make start && make migrate && make seed'
+
+function ds() {
+  docker-compose exec $1 sh
+}
 
 
 ############
