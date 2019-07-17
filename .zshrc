@@ -4,6 +4,7 @@ alias ll='ls -la';
 alias dot='cd ~/work/dotfiles && git status';
 alias work='cd ~/work';
 alias dc='docker-compose';
+alias pycache_purge="find . -name '*.pyc' -delete";
 
 # Git
 alias gco='git checkout'
