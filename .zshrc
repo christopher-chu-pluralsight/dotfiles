@@ -35,7 +35,7 @@ alias wait_for_mount="~/work/dotfiles/tmux_scripts/wait_for_mount.sh"
 alias nuke='dc down && make build && make start && make migrate && make seed'
 
 function ds() {
-  docker-compose exec $1 sh
+  docker-compose exec $1 sh -l
 }
 
 
