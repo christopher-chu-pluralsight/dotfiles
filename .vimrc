@@ -31,6 +31,9 @@ vmap < <gv  " stay in visual mode while unindenting
 nnoremap <leader>[ :exe "vertical resize -15" <CR>
 nnoremap <leader>] :exe "vertical resize +15" <CR>
 
+" Shortcut to find current file in nerd tree
+nnoremap <leader>f :NERDTreeFind<CR>
+
 " Still trying to figure this one out...
 " command TrailingWhitespace :exe "%s/\s\+$//g"    
 
@@ -75,9 +78,9 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 " Color Schemes
 "Plug 'ErichDonGubler/vim-sublime-monokai'
-colorscheme sublimemonokai
+"colorscheme sublimemonokai
 "Plug 'morhetz/gruvbox'
-"colorscheme gruvbox
+colorscheme gruvbox
 "colorscheme chris1
 
 " Shows git info about each line
